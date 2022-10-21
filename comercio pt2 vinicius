@@ -1,0 +1,68 @@
+fimse
+leia(fim)
+
+até fim = "2"
+
+fimprocedimento
+
+procedimento cardapio()
+inicio
+limpatela
+escreval ("CARDÁPIO DA PIZZARIA")
+escreval ("")
+       escreval("Sabores das pizzas")
+       escreval("Pizza de Mussarela -> 40,00 R$")
+       escreval("Ingredientes: Mussarela e Oregano")
+       escreval("")
+       escreval("Pizza de Calabresa -> 42,00 R$")
+       escreval("Ingredientes: Mussarela e Calabresa fatiada")
+       escreval("")
+       
+       
+       escreval("Pizza de Peperoni -> 50,00 R$")
+       escreval("Ingredientes: Mussarela e Salame Peperoni")
+       escreval("")
+       escreval("Bebidas")
+       escreval("Coca-Cola Lata -> 4,50 R$")
+       escreval("Refrigerante Coca-Cola 350ml")
+       escreval("")
+       escreval("Dolly Guaraná Garrafa -> 8,90 R$")
+       escreval("Refrigerante Dolly sabor guaraná, Garrafa 2 Litros")
+       escreval("")
+       escreval("Suco de Laranja -> 6,00 R$")
+       escreval("Suco natural sabor laranja, 400ml")
+       escreval("")
+escreval ("")
+escreval("Pressione ENTER para retornar ao MENU
+leia (retmenu)
+limpatela
+menu()
+fimprocedimento
+
+procedimento buscar_usuario()
+inicio
+status <- 0
+i <- 0
+limpatela
+escreva("Digite o numero de telefone:")
+leia(fones)
+para i de 0 ate 1 faca
+    se fones = cadastro [i].fone entao
+      escreval("")
+      escreval("")
+      escreval("Dados do Cliente")
+      escreval("Nome:, cadastro [i].
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fimalgoritmo
