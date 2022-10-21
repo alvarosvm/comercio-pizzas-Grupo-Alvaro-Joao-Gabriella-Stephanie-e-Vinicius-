@@ -1,0 +1,97 @@
+Var
+
+cadastro: vetor [0..1] de dados
+resp, cod, cont, cond, pedido, status, m_qtd_1, m_qtd_2, m_qtd_3: inteiro
+comp, fim, fones, m a m, piz_2, piz_3, m_piz_1, m_piz_3, obs:caractere
+beb_1, beb_2, beb_3 > caractere
+opt, i , j , s , p_mam, metade, p_int, qnt_2, qtd_3, beb b_qtd_1, b_qtd_2, b_qtd_3: inteiro
+c_1, c_2, c_3, m_c_1, m_c_2, m_c_3, b_c_2, b_c_3, retmenu: inteiro
+pmam, pint, valorpizzameio, valorpizzainteiro, tempoentrega, total,totalpedido, val_beb: real
+
+função calculototalpedido(valorpizzameio,valorpizzainteiro,val_beb : real):  real
+inicio
+
+   totalpedido <-(valorpizzameio + valorpizzainteiro + val_beb)
+   
+fimfunção
+
+procedimento menu()
+
+inicio
+
+repita
+escreval("-----------------------------------")
+escreval("--------------PIZZARIA-------------")
+escreval("----------------MENU---------------")
+escreval("-----------------------------------")
+escreval("")
+escreval(" (1) Cadastrar Novo Cliente")
+escreval(" (2) Buscar Cliente por nº de Telefone e efetuar o pedido")
+escreval(" (3)Cardápio de pizzas")
+escreval(" (4) Sair")
+escreval("")
+escreval("Digite a opção desejada: ")
+leia(opt)
+  escolha(opt)
+    caso 1
+          limpatela
+          cadastro()
+    caso 2
+         limpatela
+         buscar_usuario()
+    caso 3
+          limpatela
+          cardapio
+    caso 4
+          limpatela
+          escreval("Aplicação encerrada, Volte sempre")
+    outrocaso
+          escreval("Opção Invalida")
+    fimescolha
+  ate (opt = 4)
+  
+  fimprocedimento cadastro()
+  
+inicio
+
+repita
+se cont = 2 entao
+escreval("Não Há Mais Espaço Disponivel Para Novos Cadastros")
+escreval("")
+menu()
+senao
+
+escreval("Cadastre aqui um Novo Cliente")
+escreval("Qual o nome do cliente")
+                leia(cadastro[cont].nome)
+escreval("Qual o nº de telefone")
+                leia(cadastro[cont].fone)
+escreval("Qual o nº do CPF")
+                leia(cadastro[cont].cpf)
+escreval("Qual endereço de email")
+                leia(cadastro[cont].email)
+escreval("Qual o nome da rua do Cliente)
+                leia(cadastro[cont].rua)
+escreval("Numero da residencia")
+                leia(cadastro[cont].num)
+escreval("Qual estado")
+                leia(cadastro[cont].est)
+escreval("Qual Cidade")
+                leia(cadastro[cont].cid)
+escreval("Qual o Bairro")
+                leia(cadastro[cont].bai)
+escreval("Qual o CEP")
+                leia(cadastro[cont].cep)
+cont <- cont+1
+
+limpatela
+escreval("dseja fazer um novo cadastro?")
+escreval("1 = SIM | 2 = NÃO")
+fimse
+leia(fim)
+
+
+
+
+
+
