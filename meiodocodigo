@@ -1,0 +1,213 @@
+escreval("nome: ", cadastro[i].rua, " N°: ", cadastro[i].num)
+status <- 1
+fimse
+fimpara
+se (status = 0) entao
+escreval(" ")
+escreval("Cadastro nao Encontrado")
+fimse
+escreval(" ")
+escreval(" ")
+escreval("Escolha A Opção A Seguir?")
+escreval(" (1) -> Buscar oureo Cliente")
+escreval(" (2) -> Cadastrar novo Cliente")
+escreval(" (3) -> Seguir para Cliente")
+leia (resp)
+escolha resp
+caso 1
+buscar_usuario()
+caso 2
+limpatela
+cadastro()
+caso 3
+pedido ()
+fimescolha
+fimprocedimento
+
+
+procedimento pedido()
+inicio
+limpatela
+
+repita
+limpatela
+escreval("Tipos de Pizza")
+escreval(" (1) -> Incluir no pedido Pizza Meio a Meio")
+escreval(" (2) -> Incluir no pedido uma Pizza Inteira")
+escreval(" (3) -> Incluir no pedido uma Bebida")
+escreval ("")
+leia (m_a_m)
+se (m_a_m = "1") entao
+limpatela
+escreval ("Escolha 2 sabores paara a Pizza meio a meio")
+escreval("")
+escreval("(1) - Pizza de Mussarela -> 20,00 R$")
+escreval("Ingredientes: Mussarela e Oregano")
+escreval("")
+escreval("(2) - Pizza de Calabresa -> 21,00 R$")
+escreval("Ingredientes: Mussarela e Calabresa fatiadas")
+escreval("")
+escreval("(3) - Pizza de Peperoni -> 25,00 R$")
+escreval("Ingredientes: Mussarela e Salame de Peperoni")
+escreval("")
+repita
+leia (p_mam)
+escolha (p_mam)
+caso 1
+valorpizzameio <- valorpizzameio + 40/2
+tempoentrega <- tempoentrega + 1
+metade<- metade + 1
+m_piz_1 <- "Meia Pizza de Mussarela -> 20,00 R$"
+m_qtd_1 <- 1 + m_qtd_1
+m_c_1 <- 1
+caso 2
+valorpizzameio <- valorpizzameio + 42/2
+tempoentrega <- tempoentrega + 1
+metade<- metade + 1
+m_piz_2 <- "Metade Pizza Calabresa -> 21,00 R$"
+m_qtd_2 <- 1 + m_qtd_2
+m_c_2 <- 1
+caso 3
+valorpizzameio <- valorpizzameio +50/2
+tempoentrega <- tempoentrega + 1
+metade<- metade + 1
+m_piz_3 <- "Metade Pizza de Peperoni -> 25,00 R$"
+m_qtd_3 <- 1 + m_qtd_3
+m_c_3 <- 1
+outrocaso
+escreval("Escolha um código válido")
+fimescolha
+ate metade = 2
+metade<-0
+escreval("")
+escreval("Depois Finaliza o pedido?")
+escreval(" (1) = SIM  | (2) = NÃO ")
+leia (pedido)
+fimse
+
+//zerar contadores de pizza para novos pedidos
+se (m_a_m = "2") então
+limpatela
+escreval("")
+escreval(" (1) - Pizza de Mussarela -> 40,00 R$")
+escreval("Ingredientes: Mussarela e Oregano")
+escreval("")
+escreval(" (2) - Pizza de Calabresa -> 42,00 R$")
+escreval("Ingredientes: Mussarela e Calabresa fatiada")
+escreval("")
+escreval("Deseja Finalizar o pedido?")
+escreval(" (1) SIM | (2) NÃO ")
+leia (pedido)
+fimse
+
+//zerar contadores de pizza para novos pedidos
+se (m_a_m = "2") então
+limpatela
+escreval("")
+escreval("(1) - Pizza de Mussarela -> 40,00 R$")
+escreval("Ingredientes: Mussarela e Oregano")
+escreval("")
+escreval("(2) - Pizza de Calabresa -> 42,00 R$")
+escreval("Ingredientes: Mussarela de Calabresa fatiada")
+escreval("")
+escreval("(3) - Pizza de Peperoni -> 50,00 R$")
+escreval("Ingredientes: Mussarela e Salame Peperoni")
+escreval("")
+leia(p_int)
+escolha (P_int)
+  caso 1
+    valorpizzainteiro <- valorpizzainteiro + 40
+    tempoentrega <- tempoentrega + 2
+    piz_1 <- "Pizza de Mussarela -> 40,00 R$"
+    qtd_1 <- 1 + qtd_1
+    c_2 <- 1
+  caso 2
+    valorpizzainteiro <- valorpizzainteiro + 42
+    tempoentrega <- tempoentrega + 2
+    piz_2 <- "Pizza de Calabresa -> 42,00 R$
+    qtd_3 <- 1 + qtd_2
+    c_2 <- 1
+  caso 3
+    valorpizzainteiro <- valorpizzainteiro + 50
+    tempoentrega <- tempoentrega + 2
+    piz_3 <-"Pizza de Peperoni -> 50,00 R$
+    qtd)3 <- 1 + qtd_3
+    c_3 <- 1
+  outrocaso
+     escreval("Escolha um código válido")
+  fimescolha
+  escreval("Deseja Finalizar o pedido?")
+  tempoentrega <- tempoentrega + 2
+  piz_3 <- "Pizza de Peperoni -> 50,00 R$"
+  qtd_3 <- 1 + qtd_3
+  c_3 <- 1
+  outrocaso
+    escreval("Escolha um código válido")
+  fimescolha
+  escreval("Deseja Finalizar o pedido?")
+  escreval("  (1) = SIM  |  (2) = NÃO
+  leia (pedido)
+  fimse
+  //inserção de bebida
+  se (m_a_m = "3") entao
+  limpatela
+   escreval("Bebidas")
+     escreval(" (1) - Coca-Cola Lata -> 4,50 R$ ")
+     escreval("Refrigerante Coca-Cola 350ml")
+     escreval("")
+     escreval(" (2) - Dolly Guaraná Garrafa 0> 8,90 R$ ")
+     escreval("Refrigerante Dolly sabor guaraná, garrafa 2 litros")
+     escreval("")
+     escreval(" (3) - Suco de laranja -> 6,00 R$ ")
+     escreval("Suco natural sabor laranja, 400ml")
+   leia(beb)
+    caso 1
+    val_beb <- val_beb + 4.50
+     escreval9" Suco natural sabor laranja, 400ml")
+   leia(beb)
+     caso 1
+     val_beb <- val_beb + 4.50
+     tempoentrega <- tempoentrega + 0
+     beb_1 <- "Coca-Cola Lata -> 4,50 R$"
+     b_qtd_1 <- 1 + b_qtd_1
+     b_c_1 <- 1
+   caso 2
+     val_beb <- val beb + 8.90
+     tempoentrega <- tempoentrega + 0
+     beb_2 <- "Dolly Guaraná Garrafa -> 8,90 R$
+     b_qtd_2 <- 1 + b_qtd_2
+     b_c_2 <-1
+    caso 3
+    val_beb <- val_beb + 6
+    tempoentrega <- tempoentrega + 1
+    beb_3 <- 1 + b_qtd_3
+    b_c_3 <- 1
+   outrocaso
+     escreval("Escolha um Código Válido")
+   fimescolha
+   escreval("Deseja Finalizar o pedido?")
+   escreval(" (1) = SIM | (2) = NÃO ")
+   leia (pedido)
+   fimse
+   //fim de inserção
+   
+   
+   ate pedido = 1
+   
+   
+   
+   
+   
+   total <- calculototalpedido(valorpizzameio, valorpizzainteiro, val_beb)
+   limpatela
+   
+   escreval("Descrição do Pedido)
+   se c_1 > 0 entao
+    escreval(qtd_1, " ", piz_1)
+    fimse
+   se c_2 > 0 entao
+    escreval(qtd_3, " ", piz_3)
+  fimse
+   se m_c_1 > 0 entao
+     escreval(m_qtd_1, " ", m_piz_1)
+     fimse
