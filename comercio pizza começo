@@ -1,0 +1,144 @@
+Var
+
+cadastro: vetor [0..1] de dados
+resp, cod, cont, cond, pedido, status, m_qtd_1, m_qtd_2, m_qtd_3: inteiro
+comp, fim, fones, m a m, piz_2, piz_3, m_piz_1, m_piz_3, obs:caractere
+beb_1, beb_2, beb_3 > caractere
+opt, i , j , s , p_mam, metade, p_int, qnt_2, qtd_3, beb b_qtd_1, b_qtd_2, b_qtd_3: inteiro
+c_1, c_2, c_3, m_c_1, m_c_2, m_c_3, b_c_2, b_c_3, retmenu: inteiro
+pmam, pint, valorpizzameio, valorpizzainteiro, tempoentrega, total,totalpedido, val_beb: real
+
+função calculototalpedido(valorpizzameio,valorpizzainteiro,val_beb : real):  real
+inicio
+
+   totalpedido <-(valorpizzameio + valorpizzainteiro + val_beb)
+   
+fimfunção
+
+procedimento menu()
+
+inicio
+
+repita
+escreval("-----------------------------------")
+escreval("--------------PIZZARIA-------------")
+escreval("----------------MENU---------------")
+escreval("-----------------------------------")
+escreval("")
+escreval(" (1) Cadastrar Novo Cliente")
+escreval(" (2) Buscar Cliente por nº de Telefone e efetuar o pedido")
+escreval(" (3)Cardápio de pizzas")
+escreval(" (4) Sair")
+escreval("")
+escreval("Digite a opção desejada: ")
+leia(opt)
+  escolha(opt)
+    caso 1
+          limpatela
+          cadastro()
+    caso 2
+         limpatela
+         buscar_usuario()
+    caso 3
+          limpatela
+          cardapio
+    caso 4
+          limpatela
+          escreval("Aplicação encerrada, Volte sempre")
+    outrocaso
+          escreval("Opção Invalida")
+    fimescolha
+  ate (opt = 4)
+  
+  fimprocedimento cadastro()
+  
+inicio
+
+repita
+se cont = 2 entao
+escreval("Não Há Mais Espaço Disponivel Para Novos Cadastros")
+escreval("")
+menu()
+senao
+
+escreval("Cadastre aqui um Novo Cliente")
+escreval("Qual o nome do cliente")
+                leia(cadastro[cont].nome)
+escreval("Qual o nº de telefone")
+                leia(cadastro[cont].fone)
+escreval("Qual o nº do CPF")
+                leia(cadastro[cont].cpf)
+escreval("Qual endereço de email")
+                leia(cadastro[cont].email)
+escreval("Qual o nome da rua do Cliente)
+                leia(cadastro[cont].rua)
+escreval("Numero da residencia")
+                leia(cadastro[cont].num)
+escreval("Qual estado")
+                leia(cadastro[cont].est)
+escreval("Qual Cidade")
+                leia(cadastro[cont].cid)
+escreval("Qual o Bairro")
+                leia(cadastro[cont].bai)
+escreval("Qual o CEP")
+                leia(cadastro[cont].cep)
+cont <- cont+1
+
+limpatela
+escreval("dseja fazer um novo cadastro?")
+escreval("1 = SIM | 2 = NÃO")
+fimse
+leia(fim)
+
+até fim = "2"
+
+fimprocedimento
+
+procedimento cardapio()
+inicio
+limpatela
+escreval ("CARDÁPIO DA PIZZARIA")
+escreval ("")
+       escreval("Sabores das pizzas")
+       escreval("Pizza de Mussarela -> 40,00 R$")
+       escreval("Ingredientes: Mussarela e Oregano")
+       escreval("")
+       escreval("Pizza de Calabresa -> 42,00 R$")
+       escreval("Ingredientes: Mussarela e Calabresa fatiada")
+       escreval("")
+
+
+       escreval("Pizza de Peperoni -> 50,00 R$")
+       escreval("Ingredientes: Mussarela e Salame Peperoni")
+       escreval("")
+       escreval("Bebidas")
+       escreval("Coca-Cola Lata -> 4,50 R$")
+       escreval("Refrigerante Coca-Cola 350ml")
+       escreval("")
+       escreval("Dolly Guaraná Garrafa -> 8,90 R$")
+       escreval("Refrigerante Dolly sabor guaraná, Garrafa 2 Litros")
+       escreval("")
+       escreval("Suco de Laranja -> 6,00 R$")
+       escreval("Suco natural sabor laranja, 400ml")
+       escreval("")
+escreval ("")
+escreval("Pressione ENTER para retornar ao MENU
+leia (retmenu)
+limpatela
+menu()
+fimprocedimento
+
+procedimento buscar_usuario()
+inicio
+status <- 0
+i <- 0
+limpatela
+escreva("Digite o numero de telefone:")
+leia(fones)
+para i de 0 ate 1 faca
+    se fones = cadastro [i].fone entao
+      escreval("")
+      escreval("")
+      escreval("Dados do Cliente")
+      escreval("Nome:, cadastro [i].
+
